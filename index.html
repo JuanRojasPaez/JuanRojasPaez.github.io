@@ -1,5 +1,7 @@
 <!doctype HTML>
 <html>
+<!--POEM https://www.powerpoetry.org/poems/life-without-technology-->
+<!--https://www.poetrysoup.com/poem/before_the_technology_took-over_844333-->
 <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
@@ -7,6 +9,8 @@
       <!--CUSTOM MARKER WORKING-->
       <!--A MARKER-->
       <a-marker preset='custom' type='pattern' url="markers/newA.patt">
+        <a-image position="0 0.5 -2" rotation="-91 0 0" src="ATLB.png" width="2" height="2"></a-image>
+        <a-image position="0 0.5 0" rotation="-90 0 0" src="A.png" width="2" height="2"></a-image>
         <a-sphere position="0 0.5 0" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="1" segments-height="53">
           <a-animation attribute="rotation"
             dur="10000"
@@ -21,7 +25,7 @@
       <!--T MARKER-->
       <a-marker preset='custom' type='pattern' url="markers/newT.patt">
         <a-image position="0 0.5 -2" rotation="-91 0 0" src="ATLB.png" width="2" height="2"></a-image>
-        <a-image position="0 0.5 0" rotation="-90 0 0" src="sampleImage.png" width="2" height="2"></a-image>
+        <a-image position="0 0.5 0" rotation="-90 0 0" src="T.png" width="2" height="2"></a-image>
         <a-sphere position="0 0.5 2" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="1" segments-height="53">
           <a-animation attribute="rotation"
             dur="10000"
@@ -47,20 +51,23 @@
 
       <!--B MARKER-->
       <a-marker preset='custom' type='pattern' url="markers/newB.patt">
+        <a-image position="0 0.5 -2" rotation="-91 0 0" src="ATLB.png" width="2" height="2"></a-image>
+        <a-image position="0 0.5 0" rotation="-90 0 0" src="B.png" width="2" height="2"></a-image>
         <a-sphere position="0 0.5 0"src="markers/marsImage.jpg" radius="1" segments-height="10">
-          <a-animation attribute="scale"
-            dur="1000"
-            from= "1 1 1"
-            to="1 1 1"
-            direction='alternate-reverse'
-            easing= "ease-in-out-circ"
-            repeat="indefinite">
+          <a-animation attribute="rotation"
+            dur="10000"
+            from="0 360 0"
+            to= "0 0 360"
+            repeat="indefinite"
+            easing= "linear">
           </a-animation>
           </a-sphere>
       </a-marker>
 
       <!--L MARKER-->
       <a-marker preset='custom' type='pattern' url="markers/newL.patt">
+        <a-image position="0 0.5 -2" rotation="-91 0 0" src="ATLB.png" width="2" height="2"></a-image>
+        <a-image position="0 0.5 0" rotation="-90 0 0" src="L.png" width="2" height="2"></a-image>
         <a-sphere position="0 0.5 0" src="markers/flares.jpg" radius="1" segments-height="10" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
           <!-- <a-animation attribute="scale"
             dur="1000"
@@ -74,6 +81,8 @@
 
       <!--Test marker-->
       <a-marker preset='custom' type='pattern' url="markers/T.patt">
+        <a-image position="0 0.5 -2" rotation="-91 0 0" src="ATLB.png" width="2" height="2"></a-image>
+
         <a-sphere position="0 0.5 0"src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="1" segments-height="10">
           <a-animation attribute="scale"
             dur="1000"
